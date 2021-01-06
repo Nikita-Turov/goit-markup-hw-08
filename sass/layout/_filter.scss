@@ -1,0 +1,31 @@
+.filter {
+    padding-top: 60px;
+    &__list {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    &__btn {
+        height: 38px;
+        min-width: 73px;
+        background-color: #F5F4FA;
+        border-radius: 4px;
+        border-color: transparent; 
+        padding: 6px 22px;
+        margin-right: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--second-color);
+        transition: var(--transition);
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+    }
+    &__item:nth-last-child(-n+2) {
+        margin-top: 15px;
+    }
+}

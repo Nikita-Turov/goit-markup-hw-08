@@ -1,0 +1,48 @@
+.clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 90px;
+        color: var(--main-color);
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+        transition: var(--transition);
+        &:hover,
+        &:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+    }
+
+    &__svg {
+        height: 50px;
+        fill: currentColor;
+        transition: var(--transition);
+        .clients__link:hover &,
+        .clients__link:focus & {
+            fill: var(--accent-color);
+        }
+    }
+
+    &__item {
+        max-width: 210px;
+        &:nth-child(odd) {
+            margin-right: 30px;
+        }
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 30px;
+        }
+    }
+}

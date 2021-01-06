@@ -1,0 +1,37 @@
+.features {
+    padding-top: 60px;
+
+    &__title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1.42;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--second-color);
+        margin-bottom: 10px;
+    }
+    &__descr {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+    &__card {
+        display: block;
+        background-color: #F5F4FA;
+        border-radius: 4px;
+        height: 120px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        &:not(:first-of-type) {
+            margin-top: 30px;
+        }
+    }
+    &__svg {
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin: auto auto;
+    }
+}
