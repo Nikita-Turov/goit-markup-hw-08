@@ -1,8 +1,9 @@
 .features {
     padding-top: 60px;
+    padding-bottom: 60px;
 
     &__title {
-        font-weight: bold;
+        font-weight: 700;
         font-size: 14px;
         line-height: 1.42;
         text-align: center;
@@ -10,11 +11,15 @@
         text-transform: uppercase;
         color: var(--second-color);
         margin-bottom: 10px;
+        @media screen and (min-width: 768px) {
+           text-align: left;
+        }
     }
     &__descr {
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
+        min-height: 69px;
     }
     &__card {
         display: block;
@@ -23,7 +28,7 @@
         height: 120px;
         padding-top: 25px;
         padding-bottom: 25px;
-        margin-bottom: 30px;
+        margin-bottom: 30px;        
         &:not(:first-of-type) {
             margin-top: 30px;
         }
@@ -33,5 +38,30 @@
         width: 70px;
         height: 70px;
         margin: auto auto;
+    }
+    &__item {
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 4 * 15px) / 2);
+            margin: 15px; 
+        }
+
+        @media screen and (max-width: 767) {
+            &:not(:first-of-type) {
+                margin-top: 30px;
+            }
+        }
+    }
+    &__card-wrapper {
+        display: flex;
+        flex-direction: column; 
+    }
+    &__list {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: -15px;
+        }
     }
 }

@@ -8,7 +8,6 @@
         display: block;
     }
     &__invite {
-        margin-top: 60px;
         margin-bottom: 20px;
         font-weight: 700;
         font-size: 14px;
@@ -16,12 +15,25 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #FFFFFF;
+        @media screen and (max-width: 767px) {
+            margin-top: 60px;
+        }
+    }
+    &__wrapper {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
     }
 }
 
 .address {
     &__text {
         display: block;
+        @media screen and (min-width: 768px) {
+            font-size: 14px;
+        }
         &:not(:last-child) {
             margin-bottom: 8px;
         }
@@ -48,6 +60,9 @@
     &__input {
         height: 50px;
         width: 100%;
+        @media screen and (min-width: 768px) {
+            width: 450px;
+        }
         background-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));

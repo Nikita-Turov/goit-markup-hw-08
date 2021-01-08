@@ -11,6 +11,7 @@ body {
   
   .link {
     text-decoration: none;
+    color: var(--main-color);
   }
   
   h1,
@@ -44,4 +45,5 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--second-color);
+    margin-bottom: 30px;
   }

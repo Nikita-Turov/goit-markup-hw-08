@@ -10,6 +10,9 @@
     padding-top: 118px;
     padding-bottom: 118px;
     margin: 0 auto;
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
 
     &__title {
         font-weight: 900;

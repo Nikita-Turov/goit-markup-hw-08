@@ -1,8 +1,22 @@
 .portfolio {
     padding-top: 40px;
     padding-bottom: 60px;
+    &__list {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        @media screen and (max-width: 767px) {
+            max-width: 450px;
+        }
+        @media screen and (min-width: 768px) {
+            margin: 15px;
+            flex-basis: calc((100% - 4 * 15px) / 2);
+        }
+    }
+
     &__card {
-        max-width: 450px;
         position: relative;
         overflow: hidden;
     }
@@ -11,6 +25,10 @@
         &:hover .portfolio__overlay,
         &:focus .portfolio__overlay {
             transform: translateY(0);
+        }
+        &:hover .portfolio__footer,
+        &:focus .portfolio__footer {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
         }
     }
 
@@ -33,9 +51,16 @@
     }
 
     &__item{
-        &:not(:last-child) {
-            margin-bottom: 30px;
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
         }
+    }
+
+    &__img {
+        width: 354px;
+        height: 294px;
     }
 
     &__name {
