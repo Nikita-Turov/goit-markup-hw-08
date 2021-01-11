@@ -1,13 +1,19 @@
 .clients {
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (mix-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px; 
+    }
 
     &__list {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         margin: -15px;
+        @media screen and (max-width: 1199px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__link {
@@ -38,10 +44,16 @@
     }
 
     &__item {
-        width: calc((100% - 4 * 15px) / 2);
-        margin: 15px;
+        @media screen and (max-width: 767px) {
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+        }
         @media screen and (min-width: 768px) {
             width: calc((100% - 6 * 15px) / 3);
+            margin: 15px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 170px;
         }
     }
 }

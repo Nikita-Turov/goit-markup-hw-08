@@ -1,5 +1,8 @@
 .footer {
     text-align: center;
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -24,6 +27,10 @@
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width: 1200px) {
+            align-items: center;
         }
     }
 }
@@ -31,6 +38,8 @@
 .address {
     &__text {
         display: block;
+        transition: var(--transition);
+        width: fit-content;
         @media screen and (min-width: 768px) {
             font-size: 14px;
         }
@@ -43,12 +52,22 @@
         &-grey {
         color: inherit;
         }
+        &:hover,
+        &:focus {
+            color: var(--accent-color)
+        }
     }
 }
 
 .footer-form {
+    &__wrapper {
+        @media screen and (max-width: 1199px) {
+            margin-top: 60px;
+        }
+        @media screen and (min-width: 1200px) {
+        }
+    }
     &__invite {
-        margin-top: 60px;
         margin-bottom: 20px;
         font-weight: 700;
         font-size: 14px;
@@ -57,11 +76,22 @@
         text-transform: uppercase;
         color: #FFFFFF;
     }
+    &__field {
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: center;
+        }
+    }
     &__input {
         height: 50px;
         width: 100%;
         @media screen and (min-width: 768px) {
             width: 450px;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 358px;
+            margin-right: 12px;
+
         }
         background-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -83,7 +113,9 @@
         align-items: center;
         margin: 0 auto;
         padding: 10px 29px;
-        margin-top: 20px;
+        @media screen and (max-width: 1199px) {
+            margin-top: 20px;
+        }
         font-weight: 700;
         font-size: 16px;
         line-height: 1.87;

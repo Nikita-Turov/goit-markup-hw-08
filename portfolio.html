@@ -13,41 +13,53 @@
 <body>
     <header class="header">
         <nav class="menu">
-            <a class="logo link" href="#">Web<span class="logo-dark">Studio</span></a>
-            <button             
-                type="button"
-                class="menu__btn"
-                aria-expanded="false"
-                aria-controls="menu-container"
-                data-menu-button
-            >
-                <svg class="menu__btn-svg"
-                    width="40"
-                    height="40"
-                    aria-label="Переключатель мобильного меню"
+            <div class="menu__wrapper">
+                <a class="logo link" href="#">Web<span class="logo-dark">Studio</span></a>
+                <button             
+                    type="button"
+                    class="menu__btn"
+                    aria-expanded="false"
+                    aria-controls="menu-container"
+                    data-menu-button
                 >
-                    <use class="menu__btn-open" href="../images/sprite.svg#menu"></use>
-                    <use class="menu__btn-close" href="../images/sprite.svg#close"></use>
-                </svg>
-            </button>
+                    <svg class="menu__btn-svg"
+                        width="40"
+                        height="40"
+                        aria-label="Переключатель мобильного меню"
+                    >
+                        <use class="menu__btn-open" href="../images/sprite.svg#menu"></use>
+                        <use class="menu__btn-close" href="../images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
             <div class="menu__nav" data-menu>
-                <div class="menu__pages">
-                    <a class="menu__page link" href="./index.html">Студия</a>
-                    <a class="menu__page link current" href="./portfolio.html">Портфолио</a>
-                    <a class="menu__page link" href="#">Контакты</a>
-                </div>
-                <div class="menu__contacts">
-                    <a class="menu__contact link" href="mailto:info@example.com">
-                        <svg class="menu__contact-svg">
-                            <use href="../images/sprite.svg#mail" width='16' height='11'></use>
-                        </svg>
-                        info@example.com</a>
-                    <a class="menu__contact link" href="tel:+380991111111">
-                        <svg class="menu__contact-svg">
-                            <use href="../images/sprite.svg#smartphone" width='10' height='15'></use>
-                        </svg>
-                        +38 099 111 11 11</a>
-                </div>
+                <ul class="menu__pages list">
+                    <li>
+                        <a class="menu__page link" href="./index.html">Студия</a>
+                    </li>
+                    <li>
+                        <a class="menu__page link current" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li>
+                        <a class="menu__page link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="menu__contacts list">
+                    <li>
+                        <a class="menu__contact link" href="mailto:info@example.com">
+                            <svg class="menu__contact-svg">
+                                <use href="../images/sprite.svg#mail" width='16' height='11'></use>
+                            </svg>
+                            info@example.com</a>
+                    </li>
+                    <li>
+                        <a class="menu__contact link" href="tel:+380991111111">
+                            <svg class="menu__contact-svg">
+                                <use href="../images/sprite.svg#smartphone" width='10' height='15'></use>
+                            </svg>
+                            +38 099 111 11 11</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -220,19 +232,19 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="footer-form__wrapper">
-                <p class="footer-form__invite">Подпишитесь на рассылку</p>
-                <form class="footer-form">
-                    <label class="footer-form_field">
-                        <input class="footer-form__input" type="email" placeholder="E-mail">
-                        <button class="footer-form__btn" type="submit">Подписаться
-                            <svg class="footer-form__btn-svg">
-                                <use href="../images/sprite.svg#telegram" width='24' height='24'></use>
-                            </svg>
-                        </button>
-                    </label>
-                </form>
+                <div class="footer-form__wrapper">
+                    <p class="footer-form__invite">Подпишитесь на рассылку</p>
+                    <form class="footer-form">
+                        <label class="footer-form__field">
+                            <input class="footer-form__input" type="email" placeholder="E-mail">
+                            <button class="footer-form__btn" type="submit">Подписаться
+                                <svg class="footer-form__btn-svg">
+                                    <use href="../images/sprite.svg#telegram" width='24' height='24'></use>
+                                </svg>
+                            </button>
+                        </label>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>

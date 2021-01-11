@@ -1,6 +1,10 @@
 .header{
     border-bottom: 1px solid #ECECEC;
     height: 80px;
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 .menu {
@@ -14,16 +18,32 @@
     width: 100%;
     height: 100%;
 
+    &__wrapper {
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__nav {
         display: flex;
         align-items: center;
-
+        justify-content: space-between;
+        
         @media screen and (max-width: 767px) {
             display: none;
             padding-top: 60px;
             padding-bottom: 60px;
             z-index: 999;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+        }
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            padding-left: 88px;
+        }
+        @media screen and (min-width: 1200px) {
+            padding-left: 93px;
         }
     }
 
@@ -32,7 +52,7 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            top: 60px;
+            top: 80px;
             left: 0px;
             background-color: #fff;
             text-align: center;
@@ -41,30 +61,23 @@
     }
 
     
-    &__contacts {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-        @media screen and (max-width: 767px) {
-            font-size: 14px;  
-            margin-top: 60px;
-        }
-        @media screen and (min-width: 768px) {
-        font-size: 14px;  
-        }
-    }
-
     &__pages {
         font-weight: 500;
         font-size: 18px;
         line-height: 1.67;
         letter-spacing: 0.02em;
         @media screen and (min-width: 768px) {
-            margin-right: 84px;
             font-size: 14px;
             display: flex;
             align-items: center;
+            & > li:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            & > li:not(:last-child) {
+                margin-bottom: 52px;
+            }
         }
     }
 
@@ -79,14 +92,32 @@
         &:focus {
             color: var(--accent-color);
         }
+    }
+
+    &__contacts {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.67;
+        letter-spacing: 0.02em;
         @media screen and (max-width: 767px) {
-            &:not(:last-of-type) {
-                margin-bottom: 52px;
+            font-size: 14px;  
+            margin-top: 60px;
+            & > li:not(:last-child) {
+                margin-bottom: 16px;
             }
         }
         @media screen and (min-width: 768px) {
-            &:not(:last-of-type) {
-                margin-right: 50px;
+            font-size: 14px;  
+            & > li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            aling-items: center;
+            margin-bottom: 0px;
+            & > li:not(:last-child) {
+                margin-right: 30px;
             }
         }
     }
@@ -97,22 +128,13 @@
         display: flex;
         align-items: center;
         margin: 0 auto;
-        @media screen and (max-width: 767px) {
-            &:not(:last-of-type) {
-                margin-bottom: 16px;
-            }
-        }
-        @media screen and (min-width: 768px) {
-            &:not(:last-of-type) {
-                margin-bottom: 10px;
-            }
-        }
         transition: var(--transition);
         &:hover,
-        &:focus,
-        &:hover &-svg,
-        &:focus &-svg{
+        &:focus {
             color: var(--accent-color);
+        }
+        &:hover &-svg,
+        &:focus &-svg {
             fill: var(-accent-color);
         }
         &-svg {
@@ -120,14 +142,13 @@
             height: 15px;
             fill: currentColor;
             margin-right: 10px;
+            transition: var(--transition);
         }
     }
 
     &__btn {
         @media screen and (max-width: 767px) {
-            position: absolute;
-            top: 10px;
-            right: 0;
+            position: relative;
             width: 40px;
             height: 40px;
             background-color: transparent;

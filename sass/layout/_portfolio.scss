@@ -1,6 +1,9 @@
 .portfolio {
     padding-top: 40px;
     padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 94px;
+    }
     &__list {
         margin: -15px;
         display: flex;
@@ -9,10 +12,14 @@
     &__item {
         @media screen and (max-width: 767px) {
             max-width: 450px;
+            margin: 0 auto;
         }
         @media screen and (min-width: 768px) {
             margin: 15px;
             flex-basis: calc((100% - 4 * 15px) / 2);
+        }
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 6 * 15px) / 3);
         }
     }
 
@@ -59,8 +66,7 @@
     }
 
     &__img {
-        width: 354px;
-        height: 294px;
+        width: 100%;
     }
 
     &__name {
