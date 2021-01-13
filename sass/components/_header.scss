@@ -133,16 +133,11 @@
     &:focus {
       color: var(--accent-color);
     }
-    &:hover &-svg,
-    &:focus &-svg {
-      fill: var(-accent-color);
-    }
     &-svg {
       width: 16px;
       height: 15px;
       fill: currentColor;
       margin-right: 10px;
-      transition: var(--transition);
     }
   }
 
