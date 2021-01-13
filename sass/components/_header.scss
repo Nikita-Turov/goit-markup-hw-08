@@ -1,214 +1,214 @@
-.header{
-    border-bottom: 1px solid #ECECEC;
-    height: 80px;
-    @media screen and (min-width: 1200px) {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.header {
+  border-bottom: 1px solid #ececec;
+  height: 80px;
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .menu {
-    background-color: #fff;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 60px;
+  padding: 0 15px;
+  width: 100%;
+  height: 100%;
+
+  &__wrapper {
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      z-index: 999;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+        0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    }
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      padding-left: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-left: 93px;
+    }
+  }
+
+  &__nav.is-open {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0px;
+      background-color: #fff;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__pages {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      & > li:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      & > li:not(:last-child) {
+        margin-bottom: 52px;
+      }
+    }
+  }
+
+  &__page {
+    color: #212121;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
     position: relative;
-    height: 60px;
-    padding: 0 15px;
-    width: 100%;
-    height: 100%;
-
-    &__wrapper {
-        @media screen and (max-width: 767px) {
-            width: 100%;
-        }
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    transition: var(--transition);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
     }
-    &__nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        @media screen and (max-width: 767px) {
-            display: none;
-            padding-top: 60px;
-            padding-bottom: 60px;
-            z-index: 999;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-        }
-        @media screen and (min-width: 768px) {
-            width: 100%;
-            padding-left: 88px;
-        }
-        @media screen and (min-width: 1200px) {
-            padding-left: 93px;
-        }
-    }
+  }
 
-    &__nav.is-open {
-        @media screen and (max-width: 767px) {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 80px;
-            left: 0px;
-            background-color: #fff;
-            text-align: center;
-            width: 100%; 
-        }
+  &__contacts {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      margin-top: 60px;
+      & > li:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
-
-    
-    &__pages {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-        @media screen and (min-width: 768px) {
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            & > li:not(:last-child) {
-                margin-right: 50px;
-            }
-        }
-        @media screen and (max-width: 767px) {
-            & > li:not(:last-child) {
-                margin-bottom: 52px;
-            }
-        }
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      & > li:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      aling-items: center;
+      margin-bottom: 0px;
+      & > li:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
 
-    &__page {
-        color: #212121;
-        margin: 0 auto;
+  &__contact {
+    color: #757575;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    transition: var(--transition);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+    &:hover &-svg,
+    &:focus &-svg {
+      fill: var(-accent-color);
+    }
+    &-svg {
+      width: 16px;
+      height: 15px;
+      fill: currentColor;
+      margin-right: 10px;
+      transition: var(--transition);
+    }
+  }
+
+  &__btn {
+    @media screen and (max-width: 767px) {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border-color: transparent;
+      color: #000;
+      transition: var(--transition);
+
+      &-open {
         display: block;
-        width: fit-content;
-        position: relative;
+      }
+      &-close {
+        display: none;
+      }
+
+      &.is-open &-open {
+        display: none;
+      }
+      &.is-open &-close {
+        display: block;
+      }
+
+      &:hover .menu__btn-svg,
+      &:focus .menu__btn-svg {
+        fill: var(--accent-color);
+      }
+      &-svg {
+        display: block;
+        position: absolute;
+        padding: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: currentColor;
         transition: var(--transition);
-        &:hover,
-        &:focus {
-            color: var(--accent-color);
-        }
+      }
     }
-
-    &__contacts {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
-        @media screen and (max-width: 767px) {
-            font-size: 14px;  
-            margin-top: 60px;
-            & > li:not(:last-child) {
-                margin-bottom: 16px;
-            }
-        }
-        @media screen and (min-width: 768px) {
-            font-size: 14px;  
-            & > li:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
-        @media screen and (min-width: 1200px) {
-            display: flex;
-            aling-items: center;
-            margin-bottom: 0px;
-            & > li:not(:last-child) {
-                margin-right: 30px;
-            }
-        }
+    @media screen and (min-width: 768px) {
+      display: none;
     }
-
-    &__contact {
-        color: #757575;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        margin: 0 auto;
-        transition: var(--transition);
-        &:hover,
-        &:focus {
-            color: var(--accent-color);
-        }
-        &:hover &-svg,
-        &:focus &-svg {
-            fill: var(-accent-color);
-        }
-        &-svg {
-            width: 16px;
-            height: 15px;
-            fill: currentColor;
-            margin-right: 10px;
-            transition: var(--transition);
-        }
-    }
-
-    &__btn {
-        @media screen and (max-width: 767px) {
-            position: relative;
-            width: 40px;
-            height: 40px;
-            background-color: transparent;
-            border-color: transparent;
-            color: #000;
-            transition: var(--transition);
-
-            &-open {
-                display: block;
-            }
-            &-close {
-                display: none;
-            }
-
-            &.is-open &-open {
-                display: none;
-            }
-            &.is-open &-close {
-                display: block;
-            }
-
-            &:hover .menu__btn-svg,
-            &:focus .menu__btn-svg {
-                fill: var(--accent-color);
-            }
-            &-svg {
-                display: block;
-                position: absolute;
-                padding: 10px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                fill: currentColor;
-                transition: var(--transition);
-            }
-        }
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
-    }
+  }
 }
 
 .current {
-    color: var(--accent-color);
-    &::after {
-        content: "";
-        display: block;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-        margin: 0 auto;
-        width: 100%;
-        height: 4px;
-        position: absolute;
-        @media screen and (max-width: 767px) {
-            bottom: -8px;
-            left: 0;
-        }
-        @media screen and (min-width: 768px) {
-            bottom: -30px;
-            left: 0;
-        }
+  color: var(--accent-color);
+  &::after {
+    content: "";
+    display: block;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    @media screen and (max-width: 767px) {
+      bottom: -8px;
+      left: 0;
     }
+    @media screen and (min-width: 768px) {
+      bottom: -30px;
+      left: 0;
+    }
+  }
 }
