@@ -43,15 +43,16 @@
     width: fit-content;
     @media screen and (min-width: 768px) {
       font-size: 14px;
+      line-height: 1.71;
     }
     &:not(:last-child) {
       margin-bottom: 8px;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+      }
     }
     @media screen and (max-width: 1199px) {
       margin: 0 auto;
-    }
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 9px;
     }
     &-white {
       color: #ffffff;

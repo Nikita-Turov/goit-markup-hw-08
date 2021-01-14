@@ -246,6 +246,9 @@ img {
   .menu__contacts {
     font-size: 14px;
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .menu__contacts > li:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -455,6 +458,7 @@ img {
 @media screen and (min-width: 768px) {
   .address__text {
     font-size: 14px;
+    line-height: 1.71;
   }
 }
 
@@ -462,15 +466,15 @@ img {
   margin-bottom: 8px;
 }
 
-@media screen and (max-width: 1199px) {
-  .address__text {
-    margin: 0 auto;
+@media screen and (min-width: 1200px) {
+  .address__text:not(:last-child) {
+    margin-bottom: 9px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .address__text {
-    margin-bottom: 9px;
+    margin: 0 auto;
   }
 }
 
@@ -598,9 +602,9 @@ body.modal-open {
   background-color: #fff;
   padding: 40px;
   width: 100%;
+  min-width: 290px;
   max-width: 450px;
   height: auto;
-  max-height: 609px;
   margin: 0 auto;
   position: relative;
 }
@@ -721,6 +725,15 @@ body.modal-open {
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+@media screen and (max-width: 477px) {
+  .modal__checkbox-form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .modal__checkbox-form-field::before {
@@ -899,7 +912,7 @@ body.modal-open {
   padding-bottom: 60px;
 }
 
-@media screen and (mix-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .features {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -932,7 +945,7 @@ body.modal-open {
 
 .features__card {
   display: block;
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   border-radius: 4px;
   height: 120px;
   padding-top: 25px;
@@ -992,7 +1005,7 @@ body.modal-open {
   background-color: #f5f4fa;
 }
 
-@media screen and (mix-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .team {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -1081,7 +1094,7 @@ body.modal-open {
   padding-bottom: 60px;
 }
 
-@media screen and (mix-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .clients {
     padding-top: 94px;
     padding-bottom: 94px;
