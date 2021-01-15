@@ -747,8 +747,8 @@ body.modal-open {
   background-repeat: no-repeat;
   margin-right: 9px;
   border-radius: 2px;
-  border: 1px solid var(--primary-color);
-  transition: var(--accent-color);
+  border: 2px solid var(--second-color);
+  transition: var(--transition);
 }
 
 .modal__checkbox-input:checked + .modal__checkbox-form-field::before {
